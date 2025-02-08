@@ -8,6 +8,7 @@
 body{
     font-family: 'Montserrat';
     height: 10000vh;
+    overflow-x: hidden;
 }
 
 li, li a{
@@ -19,7 +20,7 @@ li, li a{
 header{
     display: flex;
     position: fixed;
-    width: 98%;
+    width: 100%;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -27,6 +28,8 @@ header{
     padding: 20px;
     background-color: transparent;
     transition: 0.3s ease-in-out;
+    background-color: #fff;
+    z-index: 1000;
 }
 header img{
     width: 100px;
@@ -59,10 +62,50 @@ header li.contato:hover{
     font-size: 1.1rem;
 }
 
-header.menu.scrolled{
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 20px 50px;
-    border-radius: 200px;
-    margin: 1vw 2vh 1vw 2vh;
+
+main #hero {
+    position: relative;     
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    width: 100%;
 }
+main #hero img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+main #hero i {
+    position: absolute;
+    bottom: 5%; 
+    left: 95%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    color: white; 
+    animation: updown 2s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+/* ANIMAÇÕES */
+@keyframes updown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 
