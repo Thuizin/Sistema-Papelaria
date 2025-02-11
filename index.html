@@ -1,4 +1,3 @@
-<!-- https://thuizin.github.io/Sistema-Papelaria/ -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,8 +15,8 @@
     <div class="sec02">
       <nav>
         <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Produtos</a></li>
+          <li><a href="#main">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
           <li><a href="#">Sobre</a></li>
         </ul>
       </nav>
@@ -27,16 +26,51 @@
    </header> 
 
    <!-- MAIN -->
-   <main>
+   <main id="main">
     <section class="hero">
       <div class="hero-content">
-        <h1>Encontre tudo o que <span>precisa</span> para dar vida às suas <span>ideias</span> !</h1>
+        <h1>Encontre tudo o que <span>precisa</span> para dar vida às suas <span>ideias</span>!</h1>
         <p>Criação personalizada com carinho e detalhes que fazem a diferença!</p>
         <a href="#" class="btn01">Conheça nossos produtos</a>
       </div>
     </section>
     
+    <section id="produtos">
+      <div class="l01">
+        <h2>Cadernos</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="./util/produtos/caderno01.png" alt="Caderno">
+            <div class="txt">
+              <h3>Caderno CLIFF</h3>
+              <p>O Caderno CLIFF é perfeito para quem busca organização com um toque de sofisticação. Com capa dura resistente, design minimalista e páginas de alta gramatura, ele é ideal para anotações, planejamentos e criatividade.</p>
+              <a href="#" class="btn01 popup">Saiba mais</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./util/produtos/caderno01.png" alt="Caderno">
+            <div class="txt">
+              <h3>Caderno de Anotações</h3>
+              <p>O Caderno de Anotações combina estilo e funcionalidade para tornar suas anotações ainda mais especiais. Com capa dura resistente, acabamento sofisticado e folhas de alta qualidade, ele é ideal para estudos, trabalho e criatividade.</p>
+              <a href="#" class="btn01 popup">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
    </main>
+
+   <!-- Modal (popup) -->
+   <div id="modal" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <h3 id="modal-title"></h3>
+       <img id="modal-image" src="" alt="">
+       <p id="modal-text"></p>
+     </div>
+   </div>
 
    <script src="script.js"></script>
 </body>
