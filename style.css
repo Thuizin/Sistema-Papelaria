@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --rosa: #fb648c;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,52 +21,114 @@ li, li a{
     color: #252525;
 }
 
-header{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    height: 100px;
-    padding: 20px;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
-    background-color: #fff;
-    z-index: 1000;
-}
-header img{
-    width: 100px;
-}
-header ul{
-    display: flex;
-    flex-direction: row;
-    gap: 7vw;
+a{
+    text-decoration: none;
+    color: #fff;
 }
 
-header li a{
-    transition: all .2s ease;
-}
-header li a:hover{
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-header li.contato{
-    background-color: #fc6890;
-    padding: 10px 20px;
+/* BTN's */
+.btn1{
+    background-color: var(--rosa);
+    padding: 15px 30px;
     border-radius: 200px;
     transition: all .2s ease;
-    cursor: pointer;
-    font-weight: 400;
 }
-header li.contato:hover{
-    padding: 15px 30px;
+.btn1:hover{
+    padding: 12px 35px;
     font-weight: 600;
     font-size: 1.1rem;
 }
 
 
+/* HEADER */
+nav {
+    background-color: #fff;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu a {
+    display: block;
+    color: #252525;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: all .2s ease;
+    font-size: 1.05rem;
+  }
+  
+  .menu a:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+  }
+
+  .menu a i{
+    rotate: 90deg;
+    transition: all .2s ease;
+  }
+  .menu a:hover i{
+    rotate: -90deg;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #252525;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--rosa);
+    color: #fff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover i{
+    rotate: -90deg;
+  }
+  
+  /* Responsivo */
+  @media screen and (max-width: 600px) {
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      width: 100%;
+    }
+  
+    .dropdown-content {
+      position: relative;
+    }
+  }
+
+/* MAIN */
 main #hero {
     position: relative;     
     display: flex;
@@ -92,7 +158,7 @@ main #hero i {
 
 
 
-
+/* RESPONSIVIDADE */
 
 
 /* ANIMAÇÕES */
