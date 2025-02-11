@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-    --rosa: #fb648c;
+@font-face {
+  font-family: 'Creamer';
+  src: url(./util/fontes/CREAMER\ .TTF);
 }
 
+:root{
+    --rosa: #fb648c;
+    --text01: #252525;
+}
+
+
+/* CONFIGURAÇÕES UNIVERSAIS */
 *{
     margin: 0;
     padding: 0;
@@ -11,167 +18,115 @@
 }
 body{
     font-family: 'Montserrat';
-    height: 10000vh;
+    /* height: 10000vh; */
     overflow-x: hidden;
+    cursor: default;
 }
 
 li, li a{
     list-style: none;
     text-decoration: none;
-    color: #252525;
+    color: var(--text01);
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: var(--text01);
 }
 
-/* BTN's */
-.btn1{
-    background-color: var(--rosa);
-    padding: 15px 30px;
-    border-radius: 200px;
-    transition: all .2s ease;
+/* BOTÕES */
+
+.btn01{
+  background-color: var(--rosa);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--text01);
+  transition: all .2s ease;
 }
-.btn1:hover{
-    padding: 12px 35px;
-    font-weight: 600;
-    font-size: 1.1rem;
+.btn01:hover{
+  background-color: var(--text01);
+  color: var(--rosa);
+  padding: 8px 15px;
+  font-weight: 550;
 }
 
+
+
+
+
+/* CORPO */
 
 /* HEADER */
-nav {
-    background-color: #fff;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .menu li {
-    position: relative;
-  }
-  
-  .menu a {
-    display: block;
-    color: #252525;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: all .2s ease;
-    font-size: 1.05rem;
-  }
-  
-  .menu a:hover {
-    transform: scale(1.1);
-    font-weight: 500;
-  }
+header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100vw;
+  align-items: center;
+  padding: 10px 100px;
+  background-color: #fff;
+  outline: 2px solid #f5f5f5;
+  position: fixed;
+  z-index: 1000;
+}
+.sec02 nav ul{
+  display: flex;
+  gap: 50px;
+}
+.sec02 nav ul li{
+  transition: all .2s ease;
+  position: relative;
+}
+.sec02 nav ul li:hover{
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-items: center;
+}
+.sec02 nav ul li a:before{
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 3px;
+  width: 100%;
+  background: var(--rosa);
+  border-radius: 50px;
+  transform: scaleX(0);
+  transition: all .2s ease;
+}
+.sec02 nav ul li a:hover:before{
+  transform: scaleX(1);
+}
 
-  .menu a i{
-    rotate: 90deg;
-    transition: all .2s ease;
-  }
-  .menu a:hover i{
-    rotate: -90deg;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: #252525;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: var(--rosa);
-    color: #fff;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown:hover i{
-    rotate: -90deg;
-  }
-  
-  /* Responsivo */
-  @media screen and (max-width: 600px) {
-    .menu {
-      flex-direction: column;
-    }
-  
-    .menu li {
-      width: 100%;
-    }
-  
-    .dropdown-content {
-      position: relative;
-    }
-  }
 
 /* MAIN */
-main #hero {
-    position: relative;     
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; 
-    width: 100%;
-}
-main #hero img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-main #hero i {
-    position: absolute;
-    bottom: 5%; 
-    left: 95%;
-    transform: translateX(-50%);
-    font-size: 3.5rem;
-    color: white; 
-    animation: updown 2s infinite;
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 95vh;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
+.title {
+  font-size: 3rem;
+  color: var(--text01);
+  line-height: 1;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+}
 
-
+.title span {
+  font-family: 'Creamer';
+  color: #fb648c;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
 
 
 
 
 /* RESPONSIVIDADE */
-
-
-/* ANIMAÇÕES */
-@keyframes updown{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(10px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
 
 
