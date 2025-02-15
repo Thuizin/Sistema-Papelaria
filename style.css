@@ -10,6 +10,9 @@
 }
 
 /* CONFIGURAÇÕES UNIVERSAIS */
+html {
+  scroll-padding-top: 90px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -141,6 +144,7 @@ header{
 #produtos .cards{
   display: flex;
   gap: 20px;
+  overflow-x: scroll;
 }
 
 #produtos .card {
@@ -149,6 +153,7 @@ header{
   padding: 20px;
   background-color: #fdf2f8;
   width: 250px;
+  min-width: 250px;
   height: 320px;
   border-radius: 20px;
   color: var(--text01);
