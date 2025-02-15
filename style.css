@@ -49,6 +49,7 @@ a{
   padding: 8px 15px;
   font-weight: 550;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 /* HEADER */
