@@ -17,7 +17,7 @@ const products = [
     title: "Caderno de Anotações",
     text: "O Caderno de Anotações combina estilo e funcionalidade para tornar suas anotações ainda mais especiais. Com capa dura resistente, acabamento sofisticado e folhas de alta qualidade, ele é ideal para estudos, trabalho e criatividade.",
     image: "./util/produtos/caderno01.png"
-  }
+  },
 ];
 
 // Abrir modal ao clicar em "Saiba mais"

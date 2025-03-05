@@ -6,7 +6,10 @@
 
 :root{
     --rosa: #fb648c;
+    --rosa02: #fdf2f8;
     --text01: #252525;
+    --text02: #353535;
+    --cinza01: #f5f5f5;
 }
 
 /* CONFIGURAÇÕES UNIVERSAIS */
@@ -64,7 +67,7 @@ header{
   align-items: center;
   padding: 10px 100px;
   background-color: #fff;
-  outline: 2px solid #f5f5f5;
+  outline: 2px solid var(--cinza01);
   position: fixed;
   z-index: 1000;
 }
@@ -103,7 +106,7 @@ header{
   align-items: center; 
   height: 98vh; 
   text-align: center;
-  background-color: #fdf2f8;
+  background-color: var(--rosa02);
   padding: 20px;
 }
 
@@ -140,6 +143,7 @@ header{
   display: flex;
   flex-direction: column;
   padding: 20px;
+  margin-top: 30px;
 }
 #produtos .cards{
   display: flex;
@@ -151,7 +155,7 @@ header{
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #fdf2f8;
+  background-color: var(--rosa02);
   width: 250px;
   min-width: 250px;
   height: 335px;
@@ -160,6 +164,9 @@ header{
   overflow: hidden;
   justify-content: center;
   text-align: left;
+}
+#produtos .l01:not(:first-child){
+  margin-top: 50px;
 }
 
 #produtos .card img {
@@ -210,19 +217,27 @@ header{
 }
 
 .modal-content {
-  background-color: white;
+  background-color: var(--cinza01);
   padding: 20px;
   width: 80%;
   max-width: 400px;
   border-radius: 10px;
   text-align: center;
+  align-items: top;
   position: relative;
 }
 
 .modal img {
-  width: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.modal-text{
+  text-align: center;
+  padding: 0 50px;
+  color: var(--text02);
 }
 
 .close {
@@ -231,4 +246,9 @@ header{
   right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all .4s ease;
+}
+.close:hover{
+  transform: rotate(180deg);
+  scale: 1.3;
 }
